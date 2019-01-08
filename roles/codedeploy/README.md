@@ -1,38 +1,26 @@
-Role Name
+aptoma.aws-codedeploy
 =========
 
-A brief description of the role goes here.
+Installs AWS CodeDeploy Agent
 
-Requirements
-------------
+### Adding it to your Playbook
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+Add these lines to your role file:
 
-Role Variables
---------------
+```yaml
+- src: git@github.com:aptoma/ansible-aws-codedeploy
+  scm: git
+  version: 0.1.0
+  name: aptoma.aws-codedeploy
+```
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+Run `ansible-galaxy install -r {your role file}` then add it to your roles list:
 
-Dependencies
-------------
+```yaml
+  roles:
+    - role: aptoma.aws-codedeploy
+```
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+### Testing
 
-Example Playbook
-----------------
-
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
-
-License
--------
-
-BSD
-
-Author Information
-------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+	vagrant up

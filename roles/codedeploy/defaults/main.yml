@@ -1,2 +1,1 @@
----
-# defaults file for codedeploy
+aws_region: eu-central-1
