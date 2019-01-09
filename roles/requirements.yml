@@ -1,4 +1,0 @@
----
-# from github
-- name: aptoma.aws-codedeploy
-  src: https://github.com/aptoma/ansible-aws-codedeploy
